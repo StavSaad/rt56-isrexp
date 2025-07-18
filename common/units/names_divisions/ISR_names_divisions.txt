@@ -1,0 +1,353 @@
+﻿# Brigade template historical names system. Is a new method of naming the Brigades based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# Brigade_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the Brigade template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old Brigade naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical Brigade names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names. 
+#           Numbers must start from 1 and up. 
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical Brigade. The text will be visible in the tooltip
+#                                      where you choose the historical Brigade name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+
+ISR_INF_01 = 
+{
+	name = "Infantry Brigades"
+
+	for_countries = { ISR }
+
+	can_use = {	always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	# link_numbering_with = { ISR_GAR_01 }
+
+	fallback_name = "%dth Israeli Infantry Brigade"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "1st Golani Infantry Brigade" }
+		2 = { "2nd Carmeli Infantry Brigade" }
+		3 = { "3rd Alexdroni Infantry Brigade" }
+		4 = { "4th Kiryati Infantry Brigade" }
+		5 = { "5th Givati Infantry Brigade" }
+		6 = { "6th Etzioni Infantry  Brigade" }
+		7 = { "9th Oded Infantry Brigade" }
+		8 = { "10th Harel Infantry Brigade" }
+		9 = { "11th Yiftach Infantry Brigade" }
+		10 = { "12th HaNegev Infantry Brigade" }
+		11 = { "900th Kfir Infantry Brigade" }
+		12 = { "933th Nahal Infantry Brigade" }
+		13 = { "89th Oz Special Forces Brigade" }
+		14 = { "828th Bislamach Infantry Brigade" }
+		15 = { "613th Hashmonaim Infantry Brigade" }
+		16 = { "Hilutz VeHadracha Brigade" }
+		17 = { "261st Ramon Infantry Brigade" }
+		18 = { "16th Yerushalaim Infantry Brigade" }
+		19 = { "17th Hasharon Infantry Brigade" }
+		20 = { "408th Hos Hanit Infantry Brigade" }
+		21 = { "182nd Ori Infantry Brigade" }
+		22 = { "228th Alon Infantry Brigade" }
+		23 = { "185th Tel Hai Infantry Brigade" }
+		24 = { "187th Yehonatan Infantry Brigade" }
+		25 = { "6050th Daniel Infantry Brigade" }
+		26 = { "5692nd HaAri Infantry Brigade" }
+		27 = { "186th Izraeli Infantry Brigade" }
+		28 = { "189th Negba Infantry Brigade" }
+		29 = { "855th HaShomer Infantry Brigade" }
+	}
+}
+
+ISR_CAV_01 = 
+{
+	name = "Cavalry Brigades"
+
+	for_countries = { ISR }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ISR_INF_01 }
+
+	fallback_name = "%dth Israeli Cavalry Brigade"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%dst Israeli Cavalry Brigade" }
+		2 = { "%dnd Israeli Cavalry Brigade" }
+		3 = { "%drd Israeli Cavalry Brigade" }
+		4 = { "%dth Israeli Cavalry Brigade" }
+		5 = { "%dth Israeli Cavalry Brigade" }
+		6 = { "%dth Israeli Cavalry Brigade" }
+		7 = { "%dth Israeli Cavalry Brigade" }
+		8 = { "%dth Israeli Cavalry Brigade" }
+		9 = { "%dth Israeli Cavalry Brigade" }
+		10 = { "%dth Israeli Cavalry Brigade" }
+		11 = { "%dth Israeli Cavalry Brigade" }
+		12 = { "%dth Israeli Cavalry Brigade" }
+		13 = { "%dth Israeli Cavalry Brigade" }
+		14 = { "%dth Israeli Cavalry Brigade" }
+		15 = { "%dth Israeli Cavalry Brigade" }
+		16 = { "%dth Israeli Cavalry Brigade" }
+		17 = { "%dth Israeli Cavalry Brigade" }
+		18 = { "%dth Israeli Cavalry Brigade" }
+		19 = { "%dth Israeli Cavalry Brigade" }
+		20 = { "%dth Israeli Cavalry Brigade" }
+		21 = { "%dst Israeli Cavalry Brigade" }
+		22 = { "%dnd Israeli Cavalry Brigade" }
+		23 = { "%drd Israeli Cavalry Brigade" }
+		24 = { "%dth Israeli Cavalry Brigade" }
+		25 = { "%dth Israeli Cavalry Brigade" }
+		26 = { "%dth Israeli Cavalry Brigade" }
+		27 = { "%dth Israeli Cavalry Brigade" }
+		28 = { "%dth Israeli Cavalry Brigade" }
+		29 = { "%dth Israeli Cavalry Brigade" }
+		30 = { "%dth Israeli Cavalry Brigade" }
+		31 = { "%dst Israeli Cavalry Brigade" }
+		32 = { "%dnd Israeli Cavalry Brigade" }
+		33 = { "%drd Israeli Cavalry Brigade" }
+		34 = { "%dth Israeli Cavalry Brigade" }
+		35 = { "%dth Israeli Cavalry Brigade" }
+		36 = { "%dth Israeli Cavalry Brigade" }
+		37 = { "%dth Israeli Cavalry Brigade" }
+		38 = { "%dth Israeli Cavalry Brigade" }
+		39 = { "%dth Israeli Cavalry Brigade" }
+		40 = { "%dth Israeli Cavalry Brigade" }
+		41 = { "%dst Israeli Cavalry Brigade" }
+		42 = { "%dnd Israeli Cavalry Brigade" }
+		43 = { "%drd Israeli Cavalry Brigade" }
+		44 = { "%dth Israeli Cavalry Brigade" }
+		45 = { "%dth Israeli Cavalry Brigade" }
+		46 = { "%dth Israeli Cavalry Brigade" }
+		47 = { "%dth Israeli Cavalry Brigade" }
+		48 = { "%dth Israeli Cavalry Brigade" }
+		49 = { "%dth Israeli Cavalry Brigade" }
+		50 = { "%dth Israeli Cavalry Brigade" }
+		51 = { "%dst Israeli Cavalry Brigade" }
+		52 = { "%dnd Israeli Cavalry Brigade" }
+		53 = { "%drd Israeli Cavalry Brigade" }
+
+	}
+}
+
+ISR_ART_01 = 
+{
+	name = "Artillery Brigades"
+
+	for_countries = { ISR }
+
+	can_use = { always = yes }
+
+	division_types = { "artillery_brigade" }
+
+	# Number reservation system will tie to another group.
+	# link_numbering_with = { ISR_INF_01 }
+
+	fallback_name = "%dth Israeli Artillery Brigade"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "214th Kela David Fire Brigade" }
+		2 = { "215th HaEsh Fire Brigade" }
+		3 = { "282nd HaEsh Golan Fire Brigade" }
+		4 = { "209th Kidon Fire Brigade" }
+		5 = { "213th HaTkuma Fire Brigade" }
+		6 = { "454th HaTavor Fire Brigade" }
+		7 = { "990th HaEsh Galil Fire Brigade" }
+		8 = { "7338th Adirim Fire Brigade" }
+		9 = { "973rd Ashdot Fire Brigade" }
+		10 = { "216th Loz Fire Brigade" }
+		11 = { "218th Idan Fire Brigade" }
+		12 = { "219th HaRa'am Fire Brigade" }
+		13 = { "286th Tzur Fire Brigade" }
+		14 = { "632nd Shalhevet Fire Brigade" }
+		15 = { "9693rd Kadoor HaEsh Fire Brigade" }
+		16 = { "7489th Saham Fire Brigade" }
+	}
+}
+
+ISR_AAA_01 = 
+{
+	name = "Air Defence Brigades"
+
+	for_countries = { ISR }
+
+	can_use = { always = yes }
+
+	division_types = { "anti_air_brigade" }
+
+	# Number reservation system will tie to another group.
+	# link_numbering_with = { ISR_INF_01 }
+
+	fallback_name = "%dth Israeli Air Defence Brigade"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "66th Ram Air Defence Brigade" }
+		2 = { "136th Herev Magen Air Defence Brigade" }
+		3 = { "137th Air Defence Brigade" }
+		4 = { "138th Air Defence Brigade" }
+		5 = { "139th Air Defence Brigade" }
+		6 = { "946th Drakon Air Defence Brigade" }
+		7 = { "947th Golan Air Defence Brigade" }
+	}
+}
+
+ISR_ARM_01 = 
+{
+	name = "Armored Brigades"
+
+	for_countries = { ISR }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ISR_INF_01 }
+
+	fallback_name = "%dth Israeli Armored Brigade"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "7th Sa'ar Megolan Armored Brigade" }
+		2 = { "8th HaZaken Armored Brigade" }
+		3 = { "188th Barak Armored Brigade" }
+		4 = { "401st Ilvot HaBarzel Armored Brigade" }
+		5 = { "460th Bnei Or Armored Brigade" }
+		6 = { "14th HaMahatz Armored Brigade" }
+		7 = { "179th Re'em Armored Brigade" }
+		8 = { "205th Egrof HaBarzel Armored Brigade" }
+		9 = { "679th Yfftach Armored Brigade" }
+		10 = { "27th Egrof VaRomach Armored Brigade" }
+		11 = { "130th HaBzaka Armored Brigade" }
+		12 = { "189th Kohav HaEsh Armored Brigade" }
+		13 = { "211th Shomrei Yerushalaim Armored Brigade" }
+		14 = { "217th HaSus HaDoher Armored Brigade" }
+		15 = { "263rd Merkavot HaEsh Armored Brigade" }
+		16 = { "274th Yerushalaim Armored Brigade" }
+		17 = { "278th Karnei Re'em Armored Brigade" }
+		18 = { "320th Tiran Armored Brigade" }
+		19 = { "330th Oranim Armored Brigade" }
+		20 = { "399th HaTzvaim Armored Brigade" }
+		21 = { "395th Kala Armored Brigade" }
+		22 = { "421st Hazliha Armored Brigade" }
+		23 = { "454th Bnei Hail Armored Brigade" }
+		24 = { "500th Kfir Armored Brigade" }
+		25 = { "550th Etzion Gever Armored Brigade" }
+		26 = { "600th Netivi HaEsh Armored Brigade" }
+		27 = { "640th Hetz Armored Brigade" }
+		28 = { "656th Bnei Reshef Armored Brigade" }
+		29 = { "670th Merkavot HaBarzel Armored Brigade" }
+		30 = { "820th Lavi Armored Brigade" }
+		31 = { "847th Merkavot HaPlada Armored Brigade" }
+		32 = { "889th Adirim Armored Brigade" }
+		33 = { "896th Kohavei HaEsh Armored Brigade" }
+		34 = { "943th HaShahar Armored Brigade" }
+
+	}
+}
+
+ISR_GAR_01 = 
+{
+	name = "Garrison Brigades"
+
+	for_countries = { ISR }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ISR_INF_01 }
+
+	fallback_name = "%dth Israeli Garrison Brigade"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "300th Bara'm Territorial Brigade" }
+		2 = { "474th HaGolan Territorial Brigade" }
+		3 = { "769th Hiram Territorial Brigade" }
+		4 = { "810th HeHarim Territorial Brigade" }
+		5 = { "417th Habiqa'a Territorial Brigade" }
+		6 = { "426th Etzion Territorial Brigade" }
+		7 = { "431st Menahse Territorial Brigade" }
+		8 = { "432nd Edraim Territorial Brigade" }
+		9 = { "433rd Shomron Territorial Brigade" }
+		10 = { "434th Benyamin Territorial Brigade" }
+		11 = { "435th Yehuda Territorial Brigade" }
+		12 = { "406th Yoav Territorial Brigade" }
+		13 = { "512th Parn Territorial Brigade" }
+		14 = { "6643rd Katif Territorial Brigade" }
+		15 = { "7643rd HaGefen Territorial Brigade" }
+		16 = { "270th HaArava Territorial Brigade" }
+		17 = { "513th Sagie Territorial Brigade" }
+		18 = { "811th HaHermon Territorial Brigade" }
+		19 = { "436th Macabim Territorial Brigade" }
+		20 = { "8643rd HaMercazit Territorial Brigade" }
+
+	}
+}
+
+ISR_PAR_01 = 
+{
+	name = "Paratrooper Brigades"
+
+	for_countries = { ISR }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ISR_INF_01 }
+
+	fallback_name = "%dth Israeli Paratroopers Brigade"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "35th Tzanchanim Paratroopers Brigade" }
+		2 = { "409th Hitzei HaEsh Paratroopers Brigade" }
+		3 = { "646th Shualei Marom Paratroopers Brigade" }
+		4 = { "226th Nesher Paratroopers Brigade" }
+		5 = { "55th Hod HaChanit Paratroopers Brigade" }
+	}
+}
